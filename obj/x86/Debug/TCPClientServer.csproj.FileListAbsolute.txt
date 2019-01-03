@@ -1,0 +1,11 @@
+/home/yang/Projects/_201GetLocalIP/TCPClientServer/obj/x86/Debug/TCPClientServer.csproj.CoreCompileInputs.cache
+/home/yang/Projects/_201GetLocalIP/TCPClientServer/bin/Debug/TCPClientServer.exe
+/home/yang/Projects/_201GetLocalIP/TCPClientServer/bin/Debug/TCPClientServer.pdb
+/home/yang/Projects/_201GetLocalIP/TCPClientServer/obj/x86/Debug/TCPClientServer.exe
+/home/yang/Projects/_201GetLocalIP/TCPClientServer/obj/x86/Debug/TCPClientServer.pdb
+D:\visual studio 2017\Projects\_201GetLocalIP\TCPClientServer\bin\Debug\TCPClientServer.exe
+D:\visual studio 2017\Projects\_201GetLocalIP\TCPClientServer\bin\Debug\TCPClientServer.pdb
+D:\visual studio 2017\Projects\_201GetLocalIP\TCPClientServer\obj\x86\Debug\TCPClientServer.csproj.CoreCompileInputs.cache
+D:\visual studio 2017\Projects\_201GetLocalIP\TCPClientServer\obj\x86\Debug\TCPClientServer.exe
+D:\visual studio 2017\Projects\_201GetLocalIP\TCPClientServer\obj\x86\Debug\TCPClientServer.pdb
+D:\visual studio 2017\Projects\_201GetLocalIP\TCPClientServer\obj\x86\Debug\TCPClientServer.csprojAssemblyReference.cache
