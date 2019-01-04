@@ -1,25 +1,23 @@
-﻿using System;
-using System.Net.Sockets;
-using System.Net;
-using System.Text;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 
 namespace TCPClientServer
 {
     class RSA_C_S
     {
         //RSA签名
-        public static byte[] RsaSignData(byte[] plainData, RSAParameters rsaPrivatePrams, Object hashProvider)
+        public static  byte[] RsaSignData(byte[] plainData, RSAParameters rsaPrivatePrams)
         {
+            SHA1CryptoServiceProvider hashProvider = new SHA1CryptoServiceProvider();
             RSACryptoServiceProvider rsaProvider = new RSACryptoServiceProvider();
             rsaProvider.ImportParameters(rsaPrivatePrams);
-            byte[] signatureData = rsaProvider.SignData(plainData, hashProvider as SHA1CryptoServiceProvider);
+            byte[] signatureData = rsaProvider.SignData(plainData, hashProvider);
             rsaProvider.Clear();
             return signatureData;
         }
         //RSA认证
-        public static bool RsaVerifyData(byte[] plainData, RSAParameters rsaPublicParams, Object hashProvider, byte[] signatureData)
+        public static  bool RsaVerifyData(byte[] plainData, RSAParameters rsaPublicParams, byte[] signatureData)
         {
+            SHA1CryptoServiceProvider hashProvider = new SHA1CryptoServiceProvider();
             RSACryptoServiceProvider rsaProvider = new RSACryptoServiceProvider();
             rsaProvider.ImportParameters(rsaPublicParams);
             bool isVerifyOK = rsaProvider.VerifyData(plainData, hashProvider, signatureData);
@@ -27,7 +25,7 @@ namespace TCPClientServer
             return isVerifyOK;
         }
         //RSA加密
-        static public byte[] RsaEncrypt(byte[] plainData, RSAParameters rsaPublicParams)
+         public static byte[] RsaEncrypt(byte[] plainData, RSAParameters rsaPublicParams)
         {
             RSACryptoServiceProvider rsaProvider = new RSACryptoServiceProvider();
             ////Parameters(RSAParameters)	 导入指定的 RSAParameters。
@@ -38,8 +36,8 @@ namespace TCPClientServer
             rsaProvider.Clear();
             return encrypteData;
         }
-        //脱密
-        static public byte[] RsaDecrypt(byte[] decryptedData, RSAParameters rSAParameters)
+        //RSA脱密
+         public static byte[] RsaDecrypt(byte[] decryptedData, RSAParameters rSAParameters)
         {
             RSACryptoServiceProvider rsaProvider = new RSACryptoServiceProvider();
             //Parameters(RSAParameters)	 导入指定的 RSAParameters。
